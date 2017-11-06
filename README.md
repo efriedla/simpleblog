@@ -1,24 +1,33 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Easy Template to get started:
 
-Things you may want to cover:
+* clone down
 
-* Ruby version
+* run 'bundle install' in terminal
 
-* System dependencies
+* run 'rake db:create' in terminal
 
-* Configuration
+* run 'rake db:migrate' in terminal
 
-* Database creation
+* if you already have a database name Post you can change it by going
+- db folder and see a line that looks like 'create_table :posts do |t|'
+- change ':posts' to the name you want.
+- you can also change and update the paramiters here as well 
 
-* Database initialization
+* if you had already migrated and wish to undo it you can run
+- 'rake db:rollback' in your terminal and re-migrate your new database
 
-* How to run the test suite
+* if you are basing your project off of this one without cloneing down, make sure to:
+- go to your Gemfile and add 
+    gem 'bootstrap-sass', '~> 3.2.0'
+    gem 'autoprefixer-rails'  
+- then run bundle install
+- also go to your 'layouts/application.html.erb' file and add:    
+    <%= stylesheet_link_tag    'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' %>    
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+* I hope this was helpful, for better understanding watch this tutorial:    
+           https://www.youtube.com/watch?v=pPy0GQJLZUM&t=1012s
 
 * ...
