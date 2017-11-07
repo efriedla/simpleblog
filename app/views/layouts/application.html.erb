@@ -3,6 +3,8 @@
   <head>
     <title>Simpleblog</title>
     <%= csrf_meta_tags %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag    'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' %>    
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -32,8 +34,10 @@
   </nav>
   <br/>
   <br/>
+  <%= render "partials/flash" %>
   <div class='container'>
     <%= yield %>
   </div>
+
   </body>
 </html>
